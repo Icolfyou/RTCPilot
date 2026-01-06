@@ -1,0 +1,8 @@
+# Python dependencies for pilot_center tooling and config loader
+# Install with:
+#   python3 -m pip install -r requirements.txt
+
+# YAML parsing
+PyYAML>=6.0,<7.0
+
+websockets>=12.0,<13.0

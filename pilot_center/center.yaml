@@ -1,0 +1,7 @@
+# websocket protoo center service
+# all webrtc sfu will connect to this center service to report user and stream info
+websocket:
+  listen_ip: "0.0.0.0"
+  listen_port: 9443
+  cert_path: "../RTCPilot/certificate.crt"
+  key_path: "../RTCPilot/private.key"

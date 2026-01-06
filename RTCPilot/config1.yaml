@@ -1,0 +1,40 @@
+log:
+  # log level: debug, info, warn, error
+  log_level: "info"
+  # log path
+  log_path: "server1.log"
+
+#websocket server for signaling
+websocket_server:
+  listen_ip: "0.0.0.0"
+  port: 7543
+
+#
+#webrtc candidates: [{nettype, ip, port}]
+candidates:
+  - nettype: "udp"
+    candidate_ip: "192.168.1.3"
+    listen_ip: "0.0.0.0"
+    port: 5001
+  - nettype: "udp"
+    candidate_ip: "192.168.1.3"
+    listen_ip: "0.0.0.0"
+    port: 6001
+
+cert_path: "certificate.crt"
+key_path: "private.key"
+
+downlink_discard_percent: 0
+uplink_discard_percent: 0
+
+pilot_center:
+  host: "192.168.1.4"
+  port: 9443
+  subpath: "/pilot/center"
+
+rtc_relay:
+  relay_server_ip: "192.168.1.4"
+  relay_udp_start: 20000
+  relay_udp_end: 29999
+  send_discard_percent: 0
+  recv_discard_percent: 0

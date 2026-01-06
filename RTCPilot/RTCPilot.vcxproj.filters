@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\utils">
+      <UniqueIdentifier>{12a5620a-dd8f-4b74-a0df-c73d2614f3a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\utils\av">
+      <UniqueIdentifier>{807acb8e-ea19-490b-82a0-08ed764e57ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net">
+      <UniqueIdentifier>{56a72cc1-71ba-4dd7-a7f6-6a26f65682e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net\tcp">
+      <UniqueIdentifier>{7547ce2e-780d-449c-afe0-360209fd33d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net\http">
+      <UniqueIdentifier>{caf25b2d-3857-428b-a5cb-c2804fc0304c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net\rtmp">
+      <UniqueIdentifier>{3196f11d-e9f1-4092-8300-d12a8d101b02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\format">
+      <UniqueIdentifier>{f740107e-1268-46bb-b3b5-76c21a444c4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\format\amf">
+      <UniqueIdentifier>{428bd250-cf4d-4d67-b75d-b69b51ae6113}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\format\flv">
+      <UniqueIdentifier>{9d997ec8-1fd1-47b4-80fe-4b1bd70065a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net\httpflv">
+      <UniqueIdentifier>{24ad0545-5152-43e6-a8a5-9ec681b483e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\format\mp4">
+      <UniqueIdentifier>{1577fdd2-3992-4d16-8eee-457fda210967}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net\http\websocket">
+      <UniqueIdentifier>{5b85d1e1-5aee-4383-9f83-e228fc0b25f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ws_stream">
+      <UniqueIdentifier>{7663c387-b8c6-420d-8e8b-66a1ff7df0d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ws_message">
+      <UniqueIdentifier>{b9165782-325f-40c3-9e90-0c6004a97eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\format\rtc_sdp">
+      <UniqueIdentifier>{05745d8b-0be8-4df3-a47c-f31f93042c2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\config">
+      <UniqueIdentifier>{a9433ee1-89f7-49c1-a27c-571f07ad121a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\webrtc_room">
+      <UniqueIdentifier>{1b37f6a1-ab64-42cb-8622-2e8984455d8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net\udp">
+      <UniqueIdentifier>{261e69b7-8453-4612-93b4-cf4b0fe6a72e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net\stun">
+      <UniqueIdentifier>{80770dc5-009a-48a6-be7a-c6af8e94eb8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\net\rtprtcp">
+      <UniqueIdentifier>{de28deff-03ed-464d-b90f-77e3c2db09b6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\utils\base64.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\byte_crypto.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\crc.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\av\gop_cache.cpp">
+      <Filter>源文件\utils\av</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\av\media_stream_manager.cpp">
+      <Filter>源文件\utils\av</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\httpflv\httpflv_server.cpp">
+      <Filter>源文件\net\httpflv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\httpflv\httpflv_writer.cpp">
+      <Filter>源文件\net\httpflv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\rtmp\chunk_stream.cpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\rtmp\rtmp_control_handler.cpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\rtmp\rtmp_handshake.cpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\rtmp\rtmp_server.cpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\rtmp\rtmp_session.cpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\rtmp\rtmp_session_base.cpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\rtmp\rtmp_writer.cpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\http\http_client.cpp">
+      <Filter>源文件\net\http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\http\http_server.cpp">
+      <Filter>源文件\net\http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\http\http_session.cpp">
+      <Filter>源文件\net\http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\timeex.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\format\flv\flv_pub.cpp">
+      <Filter>源文件\format\flv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\format\audio_header.cpp">
+      <Filter>源文件\format</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\format\h264_h265_header.cpp">
+      <Filter>源文件\format</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\format\opus_header.cpp">
+      <Filter>源文件\format</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RTCPilot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\http\websocket\websocket_client.cpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\http\websocket\websocket_frame.cpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\http\websocket\websocket_pub.cpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\http\websocket\websocket_server.cpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\http\websocket\websocket_session.cpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\http\websocket\ws_session_base.cpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ws_stream\ws_stream_server.cpp">
+      <Filter>源文件\ws_stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\format\flv\flv_demux.cpp">
+      <Filter>源文件\format\flv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ws_stream\ws_publish_session.cpp">
+      <Filter>源文件\ws_stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ws_stream\ws_play_session.cpp">
+      <Filter>源文件\ws_stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ws_message\ws_message_server.cpp">
+      <Filter>源文件\ws_message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ws_message\ws_message_session.cpp">
+      <Filter>源文件\ws_message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\room_mgr.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\room.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\rtc_user.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\format\rtc_sdp\rtc_sdp.cpp">
+      <Filter>源文件\format\rtc_sdp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\format\rtc_sdp\rtc_sdp_filter.cpp">
+      <Filter>源文件\format\rtc_sdp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\config\config.cpp">
+      <Filter>源文件\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\dtls_session.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\ice_server.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\webrtc_session.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\webrtc_server.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\stun\stun.cpp">
+      <Filter>源文件\net\stun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\nack_generator.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\rtp_session.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\srtp_session.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\rtprtcp\rtp_h264_pack.cpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\rtprtcp\rtp_packet.cpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\media_pusher.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\rtp_recv_session.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\media_puller.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\rtp_send_session.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\timer.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\pilot_message_client.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\port_generator.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ws_message\ws_protoo_client.cpp">
+      <Filter>源文件\ws_message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\rtc_recv_relay.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\rtc_send_relay.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\webrtc_room\tcc_server.cpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\utils\base64.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\byte_crypto.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\byte_stream.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\co_pub.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\crc.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\data_buffer.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\io_interface.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\ipaddress.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\json.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\logger.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\stream_statics.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\stringex.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\timeex.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\timer.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\uuid.hpp">
+      <Filter>源文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\av\av.hpp">
+      <Filter>源文件\utils\av</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\av\media_packet.hpp">
+      <Filter>源文件\utils\av</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\av\media_statics.hpp">
+      <Filter>源文件\utils\av</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\av\wait_basedon_timestamp.hpp">
+      <Filter>源文件\utils\av</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\amf\amf0.hpp">
+      <Filter>源文件\format\amf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\flv\flv_pub.hpp">
+      <Filter>源文件\format\flv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\av\gop_cache.hpp">
+      <Filter>源文件\utils\av</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\av\media_stream_manager.hpp">
+      <Filter>源文件\utils\av</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\httpflv\httpflv_server.hpp">
+      <Filter>源文件\net\httpflv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\httpflv\httpflv_writer.hpp">
+      <Filter>源文件\net\httpflv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\tcp\ssl_client.hpp">
+      <Filter>源文件\net\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\tcp\ssl_pub.hpp">
+      <Filter>源文件\net\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\tcp\ssl_server.hpp">
+      <Filter>源文件\net\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\tcp\tcp_client.hpp">
+      <Filter>源文件\net\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\tcp\tcp_pub.hpp">
+      <Filter>源文件\net\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\tcp\tcp_server.hpp">
+      <Filter>源文件\net\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\tcp\tcp_session.hpp">
+      <Filter>源文件\net\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtmp\chunk_stream.hpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtmp\rtmp_control_handler.hpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtmp\rtmp_handshake.hpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtmp\rtmp_pub.hpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtmp\rtmp_request.hpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtmp\rtmp_server.hpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtmp\rtmp_session.hpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtmp\rtmp_session_base.hpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtmp\rtmp_writer.hpp">
+      <Filter>源文件\net\rtmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\http\http_client.hpp">
+      <Filter>源文件\net\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\http\http_common.hpp">
+      <Filter>源文件\net\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\http\http_server.hpp">
+      <Filter>源文件\net\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\http\http_session.hpp">
+      <Filter>源文件\net\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\mp4\mp4_box.hpp">
+      <Filter>源文件\format\mp4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\audio_header.hpp">
+      <Filter>源文件\format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\h264_h265_header.hpp">
+      <Filter>源文件\format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\opus_header.hpp">
+      <Filter>源文件\format</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\http\websocket\websocket_client.hpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\http\websocket\websocket_frame.hpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\http\websocket\websocket_pub.hpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\http\websocket\websocket_server.hpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\http\websocket\websocket_session.hpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\http\websocket\ws_session_base.hpp">
+      <Filter>源文件\net\http\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ws_stream\ws_stream_server.hpp">
+      <Filter>源文件\ws_stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\flv\flv_demux.hpp">
+      <Filter>源文件\format\flv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ws_stream\ws_publish_session.hpp">
+      <Filter>源文件\ws_stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ws_stream\ws_play_session.hpp">
+      <Filter>源文件\ws_stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ws_message\ws_message_server.hpp">
+      <Filter>源文件\ws_message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ws_message\ws_message_session.hpp">
+      <Filter>源文件\ws_message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ws_message\ws_protoo_info.hpp">
+      <Filter>源文件\ws_message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\room_mgr.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\room.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\rtc_user.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\rtc_sdp\rtc_sdp.hpp">
+      <Filter>源文件\format\rtc_sdp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\rtc_sdp\rtc_sdp_media_section.hpp">
+      <Filter>源文件\format\rtc_sdp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\rtc_sdp\rtc_sdp_pub.hpp">
+      <Filter>源文件\format\rtc_sdp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\format\rtc_sdp\rtc_sdp_filter.hpp">
+      <Filter>源文件\format\rtc_sdp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\config\config.hpp">
+      <Filter>源文件\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\dtls_session.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\ice_server.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\webrtc_session.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\webrtc_server.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\udp\udp_client.hpp">
+      <Filter>源文件\net\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\udp\udp_pub.hpp">
+      <Filter>源文件\net\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\udp\udp_server.hpp">
+      <Filter>源文件\net\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\stun\stun.hpp">
+      <Filter>源文件\net\stun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\nack_generator.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\rtp_session.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\srtp_session.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_fb_pub.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_pspli.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_rr.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_sr.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_xr.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_xr_dlrr.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_xr_rrt.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtcpfb_nack.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtp_h264_pack.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtp_pack.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtp_packet.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\net\rtprtcp\rtprtcp_pub.hpp">
+      <Filter>源文件\net\rtprtcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\media_pusher.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\rtp_recv_session.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\media_puller.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\rtp_send_session.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\pilot_message_client.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\port_generator.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ws_message\ws_protoo_client.hpp">
+      <Filter>源文件\ws_message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\rtc_recv_relay.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\rtc_send_relay.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\rtc_info.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\webrtc_room\tcc_server.hpp">
+      <Filter>源文件\webrtc_room</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.yaml">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="config1.yaml">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>

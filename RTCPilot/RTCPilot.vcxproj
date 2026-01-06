@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{729dded5-1c9c-4810-af5b-3bbf1f21e3c4}</ProjectGuid>
+    <RootNamespace>RTCPilot</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>RTCPilot</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)src;$(SolutionDir)src\format;$(SolutionDir)src\format\flv;$(SolutionDir)src\format\amf;$(SolutionDir)src\utils;$(SolutionDir)src\utils\av;$(SolutionDir)src\ws_stream;$(SolutionDir)src\net;$(SolutionDir)src\net\tcp;$(SolutionDir)src\net\tcp\co_tcp;$(SolutionDir)src\net\http;$(SolutionDir)src\net\httpflv;$(SolutionDir)src\net\http\co_http;$(SolutionDir)src\net\rtprtcp;$(SolutionDir)src\net\rtmp\co_rtmp;$(SolutionDir)win_3rdparty\libuv\include;$(SolutionDir)win_3rdparty\openssl\include;$(SolutionDir)win_3rdparty\yaml-cpp\include;$(SolutionDir)win_3rdparty\libsrtp\include</IncludePath>
+    <LibraryPath>$(SolutionDir)win_3rdparty\openssl\lib;$(SolutionDir)win_3rdparty\libuv\lib;$(SolutionDir)win_3rdparty\yaml-cpp\lib;$(SolutionDir)win_3rdparty\libsrtp\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;YAML_CPP_STATIC_DEFINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>uv.lib;libssl.lib;libcrypto.lib;ws2_32.lib;yaml-cppd.lib;srtp2.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\config\config.cpp" />
+    <ClCompile Include="..\src\format\audio_header.cpp" />
+    <ClCompile Include="..\src\format\flv\flv_demux.cpp" />
+    <ClCompile Include="..\src\format\flv\flv_pub.cpp" />
+    <ClCompile Include="..\src\format\h264_h265_header.cpp" />
+    <ClCompile Include="..\src\format\opus_header.cpp" />
+    <ClCompile Include="..\src\format\rtc_sdp\rtc_sdp.cpp" />
+    <ClCompile Include="..\src\format\rtc_sdp\rtc_sdp_filter.cpp" />
+    <ClCompile Include="..\src\RTCPilot.cpp" />
+    <ClCompile Include="..\src\net\httpflv\httpflv_server.cpp" />
+    <ClCompile Include="..\src\net\httpflv\httpflv_writer.cpp" />
+    <ClCompile Include="..\src\net\http\http_client.cpp" />
+    <ClCompile Include="..\src\net\http\http_server.cpp" />
+    <ClCompile Include="..\src\net\http\http_session.cpp" />
+    <ClCompile Include="..\src\net\http\websocket\websocket_client.cpp" />
+    <ClCompile Include="..\src\net\http\websocket\websocket_frame.cpp" />
+    <ClCompile Include="..\src\net\http\websocket\websocket_pub.cpp" />
+    <ClCompile Include="..\src\net\http\websocket\websocket_server.cpp" />
+    <ClCompile Include="..\src\net\http\websocket\websocket_session.cpp" />
+    <ClCompile Include="..\src\net\http\websocket\ws_session_base.cpp" />
+    <ClCompile Include="..\src\net\rtmp\chunk_stream.cpp" />
+    <ClCompile Include="..\src\net\rtmp\rtmp_control_handler.cpp" />
+    <ClCompile Include="..\src\net\rtmp\rtmp_handshake.cpp" />
+    <ClCompile Include="..\src\net\rtmp\rtmp_server.cpp" />
+    <ClCompile Include="..\src\net\rtmp\rtmp_session.cpp" />
+    <ClCompile Include="..\src\net\rtmp\rtmp_session_base.cpp" />
+    <ClCompile Include="..\src\net\rtmp\rtmp_writer.cpp" />
+    <ClCompile Include="..\src\net\rtprtcp\rtp_h264_pack.cpp" />
+    <ClCompile Include="..\src\net\rtprtcp\rtp_packet.cpp" />
+    <ClCompile Include="..\src\net\stun\stun.cpp" />
+    <ClCompile Include="..\src\utils\av\gop_cache.cpp" />
+    <ClCompile Include="..\src\utils\av\media_stream_manager.cpp" />
+    <ClCompile Include="..\src\utils\base64.cpp" />
+    <ClCompile Include="..\src\utils\byte_crypto.cpp" />
+    <ClCompile Include="..\src\utils\crc.cpp" />
+    <ClCompile Include="..\src\utils\timeex.cpp" />
+    <ClCompile Include="..\src\utils\timer.cpp" />
+    <ClCompile Include="..\src\webrtc_room\dtls_session.cpp" />
+    <ClCompile Include="..\src\webrtc_room\ice_server.cpp" />
+    <ClCompile Include="..\src\webrtc_room\media_puller.cpp" />
+    <ClCompile Include="..\src\webrtc_room\media_pusher.cpp" />
+    <ClCompile Include="..\src\webrtc_room\nack_generator.cpp" />
+    <ClCompile Include="..\src\webrtc_room\pilot_message_client.cpp" />
+    <ClCompile Include="..\src\webrtc_room\port_generator.cpp" />
+    <ClCompile Include="..\src\webrtc_room\room.cpp" />
+    <ClCompile Include="..\src\webrtc_room\room_mgr.cpp" />
+    <ClCompile Include="..\src\webrtc_room\rtc_recv_relay.cpp" />
+    <ClCompile Include="..\src\webrtc_room\rtc_send_relay.cpp" />
+    <ClCompile Include="..\src\webrtc_room\rtc_user.cpp" />
+    <ClCompile Include="..\src\webrtc_room\rtp_recv_session.cpp" />
+    <ClCompile Include="..\src\webrtc_room\rtp_send_session.cpp" />
+    <ClCompile Include="..\src\webrtc_room\rtp_session.cpp" />
+    <ClCompile Include="..\src\webrtc_room\srtp_session.cpp" />
+    <ClCompile Include="..\src\webrtc_room\tcc_server.cpp" />
+    <ClCompile Include="..\src\webrtc_room\webrtc_server.cpp" />
+    <ClCompile Include="..\src\webrtc_room\webrtc_session.cpp" />
+    <ClCompile Include="..\src\ws_message\ws_message_server.cpp" />
+    <ClCompile Include="..\src\ws_message\ws_message_session.cpp" />
+    <ClCompile Include="..\src\ws_message\ws_protoo_client.cpp" />
+    <ClCompile Include="..\src\ws_stream\ws_play_session.cpp" />
+    <ClCompile Include="..\src\ws_stream\ws_publish_session.cpp" />
+    <ClCompile Include="..\src\ws_stream\ws_stream_server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\config\config.hpp" />
+    <ClInclude Include="..\src\format\amf\amf0.hpp" />
+    <ClInclude Include="..\src\format\audio_header.hpp" />
+    <ClInclude Include="..\src\format\flv\flv_demux.hpp" />
+    <ClInclude Include="..\src\format\flv\flv_pub.hpp" />
+    <ClInclude Include="..\src\format\h264_h265_header.hpp" />
+    <ClInclude Include="..\src\format\mp4\mp4_box.hpp" />
+    <ClInclude Include="..\src\format\opus_header.hpp" />
+    <ClInclude Include="..\src\format\rtc_sdp\rtc_sdp.hpp" />
+    <ClInclude Include="..\src\format\rtc_sdp\rtc_sdp_filter.hpp" />
+    <ClInclude Include="..\src\format\rtc_sdp\rtc_sdp_media_section.hpp" />
+    <ClInclude Include="..\src\format\rtc_sdp\rtc_sdp_pub.hpp" />
+    <ClInclude Include="..\src\net\httpflv\httpflv_server.hpp" />
+    <ClInclude Include="..\src\net\httpflv\httpflv_writer.hpp" />
+    <ClInclude Include="..\src\net\http\http_client.hpp" />
+    <ClInclude Include="..\src\net\http\http_common.hpp" />
+    <ClInclude Include="..\src\net\http\http_server.hpp" />
+    <ClInclude Include="..\src\net\http\http_session.hpp" />
+    <ClInclude Include="..\src\net\http\websocket\websocket_client.hpp" />
+    <ClInclude Include="..\src\net\http\websocket\websocket_frame.hpp" />
+    <ClInclude Include="..\src\net\http\websocket\websocket_pub.hpp" />
+    <ClInclude Include="..\src\net\http\websocket\websocket_server.hpp" />
+    <ClInclude Include="..\src\net\http\websocket\websocket_session.hpp" />
+    <ClInclude Include="..\src\net\http\websocket\ws_session_base.hpp" />
+    <ClInclude Include="..\src\net\rtmp\chunk_stream.hpp" />
+    <ClInclude Include="..\src\net\rtmp\rtmp_control_handler.hpp" />
+    <ClInclude Include="..\src\net\rtmp\rtmp_handshake.hpp" />
+    <ClInclude Include="..\src\net\rtmp\rtmp_pub.hpp" />
+    <ClInclude Include="..\src\net\rtmp\rtmp_request.hpp" />
+    <ClInclude Include="..\src\net\rtmp\rtmp_server.hpp" />
+    <ClInclude Include="..\src\net\rtmp\rtmp_session.hpp" />
+    <ClInclude Include="..\src\net\rtmp\rtmp_session_base.hpp" />
+    <ClInclude Include="..\src\net\rtmp\rtmp_writer.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtcpfb_nack.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_fb_pub.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_pspli.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_rr.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_sr.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_xr.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_xr_dlrr.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtcp_xr_rrt.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtprtcp_pub.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtp_h264_pack.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtp_pack.hpp" />
+    <ClInclude Include="..\src\net\rtprtcp\rtp_packet.hpp" />
+    <ClInclude Include="..\src\net\stun\stun.hpp" />
+    <ClInclude Include="..\src\net\tcp\ssl_client.hpp" />
+    <ClInclude Include="..\src\net\tcp\ssl_pub.hpp" />
+    <ClInclude Include="..\src\net\tcp\ssl_server.hpp" />
+    <ClInclude Include="..\src\net\tcp\tcp_client.hpp" />
+    <ClInclude Include="..\src\net\tcp\tcp_pub.hpp" />
+    <ClInclude Include="..\src\net\tcp\tcp_server.hpp" />
+    <ClInclude Include="..\src\net\tcp\tcp_session.hpp" />
+    <ClInclude Include="..\src\net\udp\udp_client.hpp" />
+    <ClInclude Include="..\src\net\udp\udp_pub.hpp" />
+    <ClInclude Include="..\src\net\udp\udp_server.hpp" />
+    <ClInclude Include="..\src\utils\av\av.hpp" />
+    <ClInclude Include="..\src\utils\av\gop_cache.hpp" />
+    <ClInclude Include="..\src\utils\av\media_packet.hpp" />
+    <ClInclude Include="..\src\utils\av\media_statics.hpp" />
+    <ClInclude Include="..\src\utils\av\media_stream_manager.hpp" />
+    <ClInclude Include="..\src\utils\av\wait_basedon_timestamp.hpp" />
+    <ClInclude Include="..\src\utils\base64.hpp" />
+    <ClInclude Include="..\src\utils\byte_crypto.hpp" />
+    <ClInclude Include="..\src\utils\byte_stream.hpp" />
+    <ClInclude Include="..\src\utils\co_pub.hpp" />
+    <ClInclude Include="..\src\utils\crc.hpp" />
+    <ClInclude Include="..\src\utils\data_buffer.hpp" />
+    <ClInclude Include="..\src\utils\io_interface.hpp" />
+    <ClInclude Include="..\src\utils\ipaddress.hpp" />
+    <ClInclude Include="..\src\utils\json.hpp" />
+    <ClInclude Include="..\src\utils\logger.hpp" />
+    <ClInclude Include="..\src\utils\stream_statics.hpp" />
+    <ClInclude Include="..\src\utils\stringex.hpp" />
+    <ClInclude Include="..\src\utils\timeex.hpp" />
+    <ClInclude Include="..\src\utils\timer.hpp" />
+    <ClInclude Include="..\src\utils\uuid.hpp" />
+    <ClInclude Include="..\src\webrtc_room\dtls_session.hpp" />
+    <ClInclude Include="..\src\webrtc_room\ice_server.hpp" />
+    <ClInclude Include="..\src\webrtc_room\media_puller.hpp" />
+    <ClInclude Include="..\src\webrtc_room\media_pusher.hpp" />
+    <ClInclude Include="..\src\webrtc_room\nack_generator.hpp" />
+    <ClInclude Include="..\src\webrtc_room\pilot_message_client.hpp" />
+    <ClInclude Include="..\src\webrtc_room\port_generator.hpp" />
+    <ClInclude Include="..\src\webrtc_room\room.hpp" />
+    <ClInclude Include="..\src\webrtc_room\room_mgr.hpp" />
+    <ClInclude Include="..\src\webrtc_room\rtc_info.hpp" />
+    <ClInclude Include="..\src\webrtc_room\rtc_recv_relay.hpp" />
+    <ClInclude Include="..\src\webrtc_room\rtc_send_relay.hpp" />
+    <ClInclude Include="..\src\webrtc_room\rtc_user.hpp" />
+    <ClInclude Include="..\src\webrtc_room\rtp_recv_session.hpp" />
+    <ClInclude Include="..\src\webrtc_room\rtp_send_session.hpp" />
+    <ClInclude Include="..\src\webrtc_room\rtp_session.hpp" />
+    <ClInclude Include="..\src\webrtc_room\srtp_session.hpp" />
+    <ClInclude Include="..\src\webrtc_room\tcc_server.hpp" />
+    <ClInclude Include="..\src\webrtc_room\webrtc_server.hpp" />
+    <ClInclude Include="..\src\webrtc_room\webrtc_session.hpp" />
+    <ClInclude Include="..\src\ws_message\ws_message_server.hpp" />
+    <ClInclude Include="..\src\ws_message\ws_message_session.hpp" />
+    <ClInclude Include="..\src\ws_message\ws_protoo_client.hpp" />
+    <ClInclude Include="..\src\ws_message\ws_protoo_info.hpp" />
+    <ClInclude Include="..\src\ws_stream\ws_play_session.hpp" />
+    <ClInclude Include="..\src\ws_stream\ws_publish_session.hpp" />
+    <ClInclude Include="..\src\ws_stream\ws_stream_server.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.yaml" />
+    <None Include="config1.yaml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
