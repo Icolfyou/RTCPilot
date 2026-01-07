@@ -12,8 +12,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -493,9 +491,7 @@ objs/*
 *.so
 *.so.*
 *.dylib
-*.dll
 *.a
-*.lib
 *.pdb
 *.ilk
 *.exp
@@ -534,7 +530,6 @@ configure.scan
 libtool
 stamp-h1
 .deps/
-.libs/
 *.lo
 *.la
 
