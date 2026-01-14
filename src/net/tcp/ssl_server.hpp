@@ -74,6 +74,7 @@ public:
                 if (ret != 0) {
                     return ret;
                 }
+                LogInfof(logger_, "SslServer received ClientHello, send ServerHello");
                 tls_state_ = TLS_SSL_SERVER_HELLO_DONE;
                 break;
             }
@@ -97,8 +98,8 @@ public:
         }
 
         if (tls_state_ == TLS_SERVER_KEY_EXCHANGE_DONE) {
+            LogInfof(logger_, "SSL handshake done.");
             tls_state_ = TLS_SERVER_DATA_RECV_STATE;
-            return 0;
         }
         
         int r0 = BIO_write(bio_in_, data, (int)len);
@@ -108,7 +109,10 @@ public:
 
         // OK, got data.
         if (r0 > 0) {
-            cb_->PlaintextDataRecv((char*)plaintext_data_, r0);
+            int plaintext_len = SSL_read(ssl_, plaintext_data_, plaintext_data_len_);
+            if (plaintext_len > 0) {
+                cb_->PlaintextDataRecv((char*)plaintext_data_, plaintext_len);
+            }
         } else {
             LogErrorf(logger_, "SSL_read error, r0:%d, r1:%d, r2:%d, r3:%d",
                     r0, r1, r2, r3);
@@ -319,6 +323,7 @@ private:
             LogErrorf(logger_, "BIO_reset error");
             return -1;
         }
+        LogInfof(logger_, "SslServer completed KeyExchange.");
         tls_state_ = TLS_SERVER_KEY_EXCHANGE_DONE;
         return 0;
     }

@@ -100,8 +100,9 @@ int main(int argc, char* argv[]) {
         LogInfof(logger.get(), "pilot center is disable.");
     }
     // Create and run the RTMP server
+    std::unique_ptr<RtmpServer> rtmp_server_ptr;
     if (Config::Instance().rtmp_cfg_.enable_) {
-        RtmpServer rtmp_server(loop, Config::Instance().rtmp_cfg_.listen_ip_, Config::Instance().rtmp_cfg_.port_, logger.get());
+        rtmp_server_ptr.reset(new RtmpServer(loop, Config::Instance().rtmp_cfg_.listen_ip_, Config::Instance().rtmp_cfg_.port_, logger.get()));
         LogInfof(logger.get(), "Starting RTMP server on %s:%d", 
             Config::Instance().rtmp_cfg_.listen_ip_.c_str(), 
             Config::Instance().rtmp_cfg_.port_);
@@ -110,8 +111,9 @@ int main(int argc, char* argv[]) {
     }
 
     // Create and run the HTTP-FLV server
+    std::unique_ptr<HttpFlvServer> httpflv_server_ptr;
     if (Config::Instance().httpflv_cfg_.enable_) {
-        HttpFlvServer httpflv_server(loop, Config::Instance().httpflv_cfg_.listen_ip_, Config::Instance().httpflv_cfg_.port_, logger.get());
+        httpflv_server_ptr.reset(new HttpFlvServer(loop, Config::Instance().httpflv_cfg_.listen_ip_, Config::Instance().httpflv_cfg_.port_, logger.get()));
         LogInfof(logger.get(), "Starting httpflv server on %s:%d", 
             Config::Instance().httpflv_cfg_.listen_ip_.c_str(), 
             Config::Instance().httpflv_cfg_.port_);
@@ -119,12 +121,13 @@ int main(int argc, char* argv[]) {
         LogInfof(logger.get(), "HTTP-FLV server is disabled");
     }
 
+    std::unique_ptr<WsStreamServer> ws_stream_server_ptr;
     // Create and run the WebSocket stream server
     if (Config::Instance().ws_stream_cfg_.enable_) {
-        WsStreamServer ws_stream_server(Config::Instance().ws_stream_cfg_.listen_ip_, 
-            Config::Instance().ws_stream_cfg_.port_, 
-            loop, 
-            logger.get());
+        ws_stream_server_ptr.reset(new WsStreamServer(Config::Instance().ws_stream_cfg_.listen_ip_,
+            Config::Instance().ws_stream_cfg_.port_,
+            loop,
+            logger.get()));
         LogInfof(logger.get(), "Starting ws_stream(flv) server on %s:%d", 
             Config::Instance().ws_stream_cfg_.listen_ip_.c_str(), 
             Config::Instance().ws_stream_cfg_.port_);
@@ -132,14 +135,31 @@ int main(int argc, char* argv[]) {
         LogInfof(logger.get(), "WebSocket stream server is disabled");
     }
 
-    WsMessageServer ws_message_server(Config::Instance().ws_listen_ip_, 
-                            Config::Instance().ws_listen_port_, 
-                            loop, 
-                            logger.get());
-    LogInfof(logger.get(), "Starting ws_message server on %s:%d for webrtc signaling",
-        Config::Instance().ws_listen_ip_.c_str(),
-        Config::Instance().ws_listen_port_);
-    std::vector<std::shared_ptr<WebRtcServer>> webrtc_servers;
+    std::unique_ptr<WsMessageServer> ws_message_server_ptr;
+    if (Config::Instance().ws_signal_cfg_.ssl_enable_ && 
+        !Config::Instance().ws_signal_cfg_.cert_path_.empty() && 
+        !Config::Instance().ws_signal_cfg_.key_path_.empty()) {
+        ws_message_server_ptr.reset(new WsMessageServer(Config::Instance().ws_signal_cfg_.listen_ip_,
+                                    Config::Instance().ws_signal_cfg_.port_, 
+                                    loop,
+                                    Config::Instance().ws_signal_cfg_.key_path_,
+                                    Config::Instance().ws_signal_cfg_.cert_path_,
+                                    logger.get()));
+        LogInfof(logger.get(), "Starting ws_message server with ssl on %s:%d for webrtc signaling",
+            Config::Instance().ws_signal_cfg_.listen_ip_.c_str(),
+            Config::Instance().ws_signal_cfg_.port_);
+
+    } else {
+        ws_message_server_ptr.reset(new WsMessageServer(Config::Instance().ws_signal_cfg_.listen_ip_,
+                                    Config::Instance().ws_signal_cfg_.port_, 
+                                loop, 
+                                logger.get()));
+        LogInfof(logger.get(), "Starting ws_message server on %s:%d for webrtc signaling",
+            Config::Instance().ws_signal_cfg_.listen_ip_.c_str(),
+            Config::Instance().ws_signal_cfg_.port_);
+    }
+
+    std::vector<std::unique_ptr<WebRtcServer>> webrtc_servers;
 
     for (auto& candidate : Config::Instance().rtc_candidates_) {
         LogInfof(logger.get(), "Configured RTC candidate, nettype:%s, candidate_ip:%s, listen_ip:%s, port:%d",
@@ -148,8 +168,8 @@ int main(int argc, char* argv[]) {
             candidate.candidate_ip_.c_str(),
             candidate.listen_ip_.c_str(),
             candidate.port_);
-        auto webrtc_server_ptr = std::make_shared<WebRtcServer>(loop, logger.get(), candidate);
-        webrtc_servers.push_back(webrtc_server_ptr); 
+        auto webrtc_server_ptr = std::make_unique<WebRtcServer>(loop, logger.get(), candidate);
+        webrtc_servers.emplace_back(std::move(webrtc_server_ptr)); 
     }
     
     if (Config::Instance().pilot_center_cfg_.enable_ && pilot_client) {

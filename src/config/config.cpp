@@ -36,10 +36,19 @@ int Config::LoadConfig(const std::string& config_file) {
         if (config["websocket_server"]) {
             auto ws_cfg = config["websocket_server"];
             if (ws_cfg["listen_ip"]) {
-                ws_listen_ip_ = ws_cfg["listen_ip"].as<std::string>();
+                ws_signal_cfg_.listen_ip_ = ws_cfg["listen_ip"].as<std::string>();
             }
             if (ws_cfg["port"]) {
-                ws_listen_port_ = ws_cfg["port"].as<uint16_t>();
+                ws_signal_cfg_.port_ = ws_cfg["port"].as<uint16_t>();
+            }
+            if (ws_cfg["ssl_enable"]) {
+                ws_signal_cfg_.ssl_enable_ = ws_cfg["ssl_enable"].as<bool>();
+            }
+            if (ws_cfg["cert_path"]) {
+                ws_signal_cfg_.cert_path_ = ws_cfg["cert_path"].as<std::string>();
+            }
+            if (ws_cfg["key_path"]) {
+                ws_signal_cfg_.key_path_ = ws_cfg["key_path"].as<std::string>();
             }
         }
         
@@ -166,6 +175,14 @@ std::string Config::Dump() {
     dump_str += "log_level: " + log_level_ + "\n";
     dump_str += "log_console: " + std::string(log_console_ ? "true" : "false") + "\n";
     
+    // WebSocket signaling server configuration
+    dump_str += "websocket_signal_server:\n";
+    dump_str += "  ssl_enable: " + std::string(ws_signal_cfg_.ssl_enable_ ? "true" : "false") + "\n";
+    dump_str += "  listen_ip: " + ws_signal_cfg_.listen_ip_ + "\n";
+    dump_str += "  port: " + std::to_string(ws_signal_cfg_.port_) + "\n";
+    dump_str += "  cert_path: " + ws_signal_cfg_.cert_path_ + "\n";
+    dump_str += "  key_path: " + ws_signal_cfg_.key_path_ + "\n";
+
     dump_str += "cert_path: " + cert_path_ + "\n";
     dump_str += "key_path: " + key_path_ + "\n";
     dump_str += "candidates:\n";

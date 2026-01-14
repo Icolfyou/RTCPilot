@@ -89,6 +89,19 @@ public:
     uint16_t    port_ = 8443;
 };
 
+class WSSignalConfig
+{
+public:
+    WSSignalConfig() = default;
+    ~WSSignalConfig() = default;
+
+public:
+    bool ssl_enable_ = false;
+    std::string cert_path_;
+    std::string key_path_;
+    std::string listen_ip_ = "0.0.0.0";
+    uint16_t    port_ = 8443;
+};
 class Config
 {
 public:
@@ -103,8 +116,7 @@ public:
     bool        log_console_ = false;
     
 public:
-    std::string ws_listen_ip_;
-    uint16_t    ws_listen_port_ = 0;
+    WSSignalConfig ws_signal_cfg_;
     
 public:
     std::vector<RtcCandidate> rtc_candidates_;
