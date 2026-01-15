@@ -279,3 +279,27 @@ if(APPLE)
         BUILD_WITH_INSTALL_RPATH TRUE
     )
 endif()
+
+################################################################
+# Minimal test target: ws protoo client
+# Keep this target light-weight: only the test source is compiled
+add_executable(ws_protoo_client_test
+    ${PROJECT_SOURCE_DIR}/tests/ws_protoo_client_test.cpp
+)
+add_dependencies(ws_protoo_client_test uv)
+
+# Include project headers
+target_include_directories(ws_protoo_client_test PRIVATE
+    ${PROJECT_SOURCE_DIR}/src
+    ${SRC_INCLUDE_DIRS}
+)
+
+# Link against system libs used by websocket/timer pieces
+IF (APPLE)
+    target_link_libraries(ws_protoo_client_test dl z m ssl crypto uv yaml-cpp)
+ELSEIF (UNIX)
+    target_link_libraries(ws_protoo_client_test rt dl z m pthread ssl crypto uv yaml-cpp)
+ELSE()
+    # On Windows, expect the environment/project to provide appropriate libs
+ENDIF()
+
