@@ -363,7 +363,7 @@ class Room:
 		# broadcast the asr result to all room members
 		self.broadcast(method="textMessage", payload={
 			"roomId": self.room_id,
-			"userId": 'ai_asr_bot',
-			"userName": 'AI_ASR_Bot',
+			"userId": 'ai_bot',
+			"userName": 'AI_Bot',
 			"message": asr_str,
 		})
